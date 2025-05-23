@@ -131,7 +131,7 @@
 /* Parallax effect */
 .parallax-container {
   @apply overflow-hidden relative;
-  perspective: 8px;
+  perspective: 12px;
   perspective-origin: 0%;
   height: 100vh;
   width: 100%;
