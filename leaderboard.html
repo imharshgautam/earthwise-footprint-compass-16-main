@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoWarriors Leaderboard</title>
+  <link rel="stylesheet" href="leaderboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <h1><span class="trophy-icon">🏆</span> Leaderboard</h1>
+        <p class="subtitle">See how you stack up against other eco-warriors</p>
+      </div>
+      <div class="filter-section">
+        <span class="filter-icon">🔍</span>
+        <select id="timeRangeSelect">
+          <option value="all-time">All Time</option>
+          <option value="this-month">This Month</option>
+          <option value="this-week">This Week</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stats-card">
+        <div class="stats-content">
+          <div>
+            <p class="stats-label">Your Rank</p>
+            <div class="stats-value-wrapper">
+              <p class="stats-value">#14</p>
+              <p class="stats-subtext">of 15</p>
+            </div>
+          </div>
+          <div class="stats-icon trophy">🏆</div>
+        </div>
+      </div>
+      
+      <div class="stats-card">
+        <div class="stats-content">
+          <div>
+            <p class="stats-label">Your Points</p>
+            <p class="stats-value">1,210</p>
+          </div>
+          <div class="stats-icon user">👤</div>
+        </div>
+      </div>
+      
+      <div class="stats-card">
+        <div class="stats-content">
+          <div>
+            <p class="stats-label">Points to Next Rank</p>
+            <p class="stats-value">51</p>
+          </div>
+          <div class="stats-icon arrow-up">⬆️</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search users by name" class="search-input">
+    </div>
+    
+    <div class="tabs">
+      <div class="tabs-list">
+        <button class="tab-trigger active" data-tab="points">Points</button>
+        <button class="tab-trigger" data-tab="trees">Trees Planted</button>
+        <button class="tab-trigger" data-tab="carbon">Carbon Saved</button>
+      </div>
+      
+      <div class="tab-content active" id="points-tab">
+        <div class="card">
+          <div class="table-container">
+            <table class="users-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>User</th>
+                  <th class="text-right">Level</th>
+                  <th class="text-right">Points</th>
+                  <th class="text-right">Trend</th>
+                </tr>
+              </thead>
+              <tbody id="pointsTableBody">
+                <!-- Table rows will be inserted by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="trees-tab">
+        <div class="card">
+          <div class="table-container">
+            <table class="users-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>User</th>
+                  <th class="text-right">Level</th>
+                  <th class="text-right">Trees</th>
+                </tr>
+              </thead>
+              <tbody id="treesTableBody">
+                <!-- Table rows will be inserted by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="carbon-tab">
+        <div class="card">
+          <div class="table-container">
+            <table class="users-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>User</th>
+                  <th class="text-right">Level</th>
+                  <th class="text-right">CO₂ Saved (kg)</th>
+                </tr>
+              </thead>
+              <tbody id="carbonTableBody">
+                <!-- Table rows will be inserted by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="events-card">
+      <div class="card-header">
+        <h2 class="card-title">📅 Upcoming Events & Challenges</h2>
+      </div>
+      <div class="card-content">
+        <div class="event-item">
+          <div class="event-icon calendar">📅</div>
+          <div class="event-details">
+            <h3>Earth Day Challenge</h3>
+            <p>Double points for all activities logged on Earth Day</p>
+            <div class="event-time">
+              <span class="time-icon">⏰</span>
+              <span class="time-text">April 22, 2025</span>
+            </div>
+          </div>
+          <button class="btn-outline" id="remindMeBtn">Remind Me</button>
+        </div>
+        
+        <div class="event-item">
+          <div class="event-icon trophy">🏆</div>
+          <div class="event-details">
+            <h3>Community Cleanup Challenge</h3>
+            <p>Join your local community for a special cleanup event</p>
+            <div class="event-time">
+              <span class="time-icon">⏰</span>
+              <span class="time-text">June 5, 2025</span>
+            </div>
+          </div>
+          <button class="btn-primary" id="joinChallengeBtn">Join Challenge</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Toast container -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+  
+  <script src="leaderboard.js"></script>
+</body>
+</html>

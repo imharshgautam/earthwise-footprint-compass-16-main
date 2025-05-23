@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,43 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// GreenMiles custom colors
+				green: {
+					50: '#f0f9f0',
+					100: '#dbeedc',
+					200: '#bfddc0',
+					300: '#9cc69f',
+					400: '#7aaf7d',
+					500: '#5c975f',
+					600: '#4a7a4c',
+					700: '#3d623e',
+					800: '#324f32',
+					900: '#2b422b',
+				},
+				earth: {
+					50: '#f6f1ee',
+					100: '#e8ddd6',
+					200: '#d5c2b4',
+					300: '#c0a38f',
+					400: '#ac8970',
+					500: '#9a7661',
+					600: '#7d5e4e',
+					700: '#664c40',
+					800: '#544036',
+					900: '#46362e',
+				},
+				sky: {
+					50: '#f0f9fe',
+					100: '#e0f2fc',
+					200: '#bae5fa',
+					300: '#7dcff5',
+					400: '#3db6ec',
+					500: '#179ad8',
+					600: '#0d7cb7',
+					700: '#0f6394',
+					800: '#12517a',
+					900: '#164566',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -70,25 +108,32 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'grow-up': {
+					'0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+					'100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' }
+				},
+				'leaf-sway': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'grow-up': 'grow-up 1.5s ease-out',
+				'leaf-sway': 'leaf-sway 3s ease-in-out infinite'
 			}
 		}
 	},
