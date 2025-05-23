@@ -23,7 +23,7 @@ const CtaSection = () => {
         </p>
         
         <Button asChild size="lg" className="bg-green-500 hover:bg-green-400 text-green-950 text-base px-8 py-7 shadow-lg shadow-black/30 hover:shadow-xl transition-all rounded-md">
-          <Link to="/activities">
+          <Link to="/login">
             Start Tracking Now <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>

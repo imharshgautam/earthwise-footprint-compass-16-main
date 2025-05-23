@@ -1,14 +1,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import OnboardingSurvey from "@/components/OnboardingSurvey";
-import DailyTrackerForm from "@/components/DailyTrackerForm";
-import CarbonScoreMeter from "@/components/CarbonScoreMeter";
-import EmissionPieChart from "@/components/EmissionPieChart";
-import EmissionBarChart from "@/components/EmissionBarChart";
-import SuggestionCard from "@/components/SuggestionCard";
-import HistoryList from "@/components/HistoryList";
-import ThemeToggle from "@/components/ThemeToggle";
+import OnboardingSurvey from "@/components/calculate-impact/OnboardingSurvey";
+import DailyTrackerForm from "@/components/calculate-impact/DailyTrackerForm";
+import CarbonScoreMeter from "@/components/calculate-impact/CarbonScoreMeter";
+import EmissionPieChart from "@/components/calculate-impact/EmissionPieChart";
+import EmissionBarChart from "@/components/calculate-impact/EmissionBarChart";
+import SuggestionCard from "@/components/calculate-impact/SuggestionCard";
+import HistoryList from "@/components/calculate-impact/HistoryList";
+import ThemeToggle from "@/components/calculate-impact/ThemeToggle";
 import { ArrowDown, FileDown } from "lucide-react";
 import {
   calculateBaselineEmissions,

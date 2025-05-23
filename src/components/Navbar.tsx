@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
-  { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
+  { icon: LayoutDashboard, label: 'Calculate Impact', path: '/calculate-impact' },
   { icon: Activity, label: 'Log Activities', path: '/activities' },
   { icon: Award, label: 'Challenges', path: '/challenges' },
   { icon: TreeDeciduous, label: 'Tree Tracker', path: '/tree-tracker' },

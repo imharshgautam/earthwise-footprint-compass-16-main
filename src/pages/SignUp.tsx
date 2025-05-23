@@ -20,7 +20,7 @@ const SignUp = () => {
     setTimeout(() => {
       setLoading(false);
       // Fake redirect to dashboard after sign up
-      navigate("/dashboard");
+      navigate("/calculate-impact");
     }, 1200);
   };
 

@@ -113,12 +113,12 @@ const ParallaxHero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 staggered-fade-in">
               <Button asChild size="lg" className="bg-green-500 hover:bg-green-400 text-green-950 text-base px-8 py-7 shadow-lg shadow-green-500/20 rounded-md">
-                <Link to="/activities">
+                <Link to="/login">
                   Get Started <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="border-green-700 text-green-200 hover:bg-green-800/50 hover:text-white hover:border-green-600 text-base px-8 py-7 rounded-md">
+              <Button asChild variant="outline" size="lg" className="border-green-700 text-green-600 hover:bg-green-800/50 hover:text-white hover:border-green-600 text-base px-8 py-7 rounded-md">
                 <a href="#features">
                   Learn More
                 </a>

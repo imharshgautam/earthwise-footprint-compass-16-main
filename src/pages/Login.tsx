@@ -19,7 +19,7 @@ const Login = () => {
     setTimeout(() => {
       setLoading(false);
       // Fake redirect to dashboard
-      navigate("/dashboard");
+      navigate("/calculate-impact");
     }, 1200);
   };
 

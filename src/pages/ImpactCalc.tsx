@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
-import ThemeToggle from "@/components/ThemeToggle";
-import Quiz from "@/components/Quiz";
+import ThemeToggle from "@/components/calculate-impact/ThemeToggle";
+import Quiz from "@/components/calculate-impact/Quiz";
 import { ArrowDown } from "lucide-react";
 
 const Index = () => {

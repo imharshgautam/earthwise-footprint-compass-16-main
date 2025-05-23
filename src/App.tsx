@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,8 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import CarbonOffset from "./pages/CarbonOffset";
+import ImpactCalc from "./pages/ImpactCalc";
+import Track from "./pages/Track";
 
 const queryClient = new QueryClient();
 
@@ -35,11 +36,19 @@ const App = () => (
               </LandingLayout>
             }
           />
-          <Route
+          {/* <Route
             path="/dashboard"
             element={
               <MainLayout>
                 <Index />
+              </MainLayout>
+            }
+          /> */}
+          <Route
+            path="/calculate-impact"
+            element={
+              <MainLayout>
+                <ImpactCalc />
               </MainLayout>
             }
           />
@@ -91,6 +100,7 @@ const App = () => (
               </MainLayout>
             }
           />
+          <Route path="/track" element={<Track />} />
           <Route
             path="/login"
             element={
@@ -108,6 +118,8 @@ const App = () => (
             }
           />
           <Route path="*" element={<NotFound />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

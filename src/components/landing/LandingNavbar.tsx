@@ -42,7 +42,7 @@ const LandingNavbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-10">
-            <Link to="/activities" className="text-green-200 hover:text-white transition-colors text-base font-medium">
+            <Link to="/calculate-impact" className="text-green-200 hover:text-white transition-colors text-base font-medium">
               Calculate Impact
             </Link>
             <Link to="/tree-tracker" className="text-green-200 hover:text-white transition-colors text-base font-medium">
@@ -57,9 +57,9 @@ const LandingNavbar = () => {
             <Link to="/carbon-offset" className="text-green-200 hover:text-white transition-colors text-base font-medium">
               Carbon Offset
             </Link>
-            <Link to="/login" className="text-green-200 hover:text-white transition-colors text-base font-semibold underline underline-offset-4 pl-2">
+            {/* <Link to="/login" className="text-green-200 hover:text-white transition-colors text-base font-semibold underline underline-offset-4 pl-2">
               Log In
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Action Buttons */}
@@ -68,7 +68,7 @@ const LandingNavbar = () => {
               <Link to="/login">Log In</Link>
             </Button>
             <Button asChild className="bg-green-500 text-green-950 hover:bg-green-400 shadow-lg shadow-green-500/20 rounded-md">
-              <Link to="/activities">Get Started</Link>
+              <Link to="/login">Get Started</Link>
             </Button>
           </div>
           
@@ -93,7 +93,7 @@ const LandingNavbar = () => {
         <div className="md:hidden backdrop-blur-md border-t border-green-800/30">
           <div className="flex flex-col py-4 px-4 space-y-3">
             <Link 
-              to="/activities" 
+              to="/calculate-impact" 
               className="text-green-200 hover:text-white py-2 px-3 rounded-md hover:bg-green-800/30 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -139,7 +139,7 @@ const LandingNavbar = () => {
                 <Link to="/login" onClick={() => setMobileMenuOpen(false)}>Log In</Link>
               </Button>
               <Button asChild className="bg-green-500 text-green-950 hover:bg-green-400 rounded-md">
-                <Link to="/activities" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+                <Link to="/login" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
               </Button>
             </div>
           </div>

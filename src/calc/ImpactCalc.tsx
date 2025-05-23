@@ -4,13 +4,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import Index from "../pages/ImpactCalc";
 import NotFound from "./pages/NotFound";
-import Track from "./pages/Track";
+import Track from "../pages/Track";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const ImpactCalc = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -27,4 +27,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-export default App;
+export default ImpactCalc;
